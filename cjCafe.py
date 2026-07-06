@@ -1,9 +1,11 @@
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 
 st.set_page_config(page_title="충주시 카페 분석", page_icon="☕", layout="wide")
 
-CSV_PATH = "chungju_cafe.csv"
+CSV_PATH = Path(__file__).parent / "chungju_cafe.csv"
 
 
 @st.cache_data
